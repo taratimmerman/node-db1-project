@@ -4,7 +4,7 @@ const Accounts = require("./accounts-model.js");
 
 router.get("/", async (req, res, next) => {
     try {
-        const data = await Accounts.getAll();
+        const data = await Accounts.get();
         res.status(200).json(data);
     } catch (e) {
         next(e);
